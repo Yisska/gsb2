@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    tools:context=".historiquedesenvois">
+
+    <include layout="@layout/activity_entete"/>
+
+    <TextView
+        android:id="@+id/game_activity_textview_Historiquedesenvois"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="13dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Historique des envois" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/dateenvoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Date d'envoi:"/>
+
+
+
+        <EditText
+            android:id="@+id/dateenvoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="  ../../..   "
+            android:textColor="#CCEA7D" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/sommetotale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Somme totale:"/>
+
+
+
+        <EditText
+            android:id="@+id/sommetotale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="  .....€  "
+            android:textColor="#CCEA7D" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/accuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Accusé de reception:"/>
+
+
+
+        <EditText
+            android:id="@+id/accuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="  ../../..   "
+            android:textColor="#CCEA7D" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

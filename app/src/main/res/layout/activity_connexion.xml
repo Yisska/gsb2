@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    tools:context=".connexion">
+
+    <include layout="@layout/activity_entete"/>
+
+    <TextView
+        android:id="@+id/game_activity_textview_connexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:padding="6dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Connexion" />
+
+
+
+
+
+    <TextView
+        android:labelFor="@id/codevisiteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="Code visiteur:"/>
+
+    <EditText
+        android:id="@+id/codevisiteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint= "Votre code visiteur" />
+
+    <TextView
+        android:labelFor="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Email:"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="example@gmail.com" />
+
+
+
+    <Button
+        android:id="@+id/main_Button_envoyer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:onClick="envoicode"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:text="Envoyer" />
+
+
+<LinearLayout
+    android:id="@+id/nouveaumdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/codeaffiche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_gravity="center_horizontal"
+            android:hint="Entrer le code affiché" />
+
+    <Button
+        android:id="@+id/main_Button_valider"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:onClick="boncode"
+        android:textSize="20sp"
+        android:text="Valider" />
+
+
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+

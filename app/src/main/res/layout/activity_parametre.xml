@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    tools:context=".parametre">
+
+    <include layout="@layout/activity_entete"/>
+
+    <TextView
+        android:id="@+id/game_activity_textview_parametre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="13dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Paramètre" />
+
+
+
+    <TextView
+        android:labelFor="@id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="Email:"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="example@gmail.com" />
+
+    <TextView
+        android:labelFor="@id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="Nom:"/>
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="Votre nom" />
+
+    <TextView
+        android:labelFor="@+id/prenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Prénom:"/>
+
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="Votre prénom" />
+
+    <TextView
+        android:labelFor="@+id/codevisiteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Code visiteur:"/>
+
+    <EditText
+        android:id="@+id/codevisiteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="Votre code visiteur" />
+
+    <TextView
+        android:labelFor="@id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="URL:"/>
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="Votre URL" />
+
+    <TextView
+        android:labelFor="@id/mdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="Mot de passe:"/>
+
+    <EditText
+        android:id="@+id/mdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="Votre mot de passe" />
+
+
+    <Button
+        android:id="@+id/main_Button_enregistrer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:text="Enregistrer" />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

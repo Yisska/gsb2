@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    tools:context=".newmotdepasse">
+
+    <include layout="@layout/activity_entete"/>
+
+
+    <TextView
+        android:id="@+id/game_activity_textview_newmotdepasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Nouveau mot de passe" />
+
+
+
+
+    <TextView
+        android:labelFor="@id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="Email:"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="example@gmail.com" />
+
+    <Button
+        android:id="@+id/main_Button_envoyer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:text="Envoyer" />
+
+    <TextView
+        android:labelFor="@id/coderecup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="Code de récupération:"/>
+
+    <EditText
+        android:id="@+id/coderecup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="Votre code de récupération" />
+
+
+    <TextView
+        android:labelFor="@id/newmdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:text="Nouveau mot de passe:"/>
+
+    <EditText
+        android:id="@+id/newmdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint=".................................." />
+
+    <Button
+        android:id="@+id/main_Button_Valider"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:text="Valider" />
+
+
+
+</LinearLayout>

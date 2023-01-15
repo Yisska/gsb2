@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fraishorsforfait">
+
+    <include layout="@layout/activity_entete"/>
+
+
+    <TextView
+        android:id="@+id/game_activity_textview_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Frais hors forfait" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/libelle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Libellé:"/>
+
+
+        <EditText
+            android:id="@+id/libelle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="Entrer le libellé   "
+            android:textColor="#CCEA7D" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/montant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Montant:"/>
+
+
+
+        <EditText
+            android:id="@+id/montant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="Entrer le montant  "
+            android:textColor="#CCEA7D" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/datedefrais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Date de frais:"/>
+
+
+
+        <EditText
+            android:id="@+id/datedefrais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="Selectionner une date "
+            android:textColor="#CCEA7D" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Button_Valider"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="120dp"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:text="Valider" />
+
+</LinearLayout>

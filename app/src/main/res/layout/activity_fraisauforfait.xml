@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fraisauforfait">
+
+    <include layout="@layout/activity_entete"/>
+
+    <TextView
+        android:id="@+id/game_activity_textview_fraisauforfait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Frais au forfait" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:padding="4dp"
+            android:textStyle="bold"
+            android:text="Type:"/>
+
+        <EditText
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:hint="type" />
+
+        <Spinner
+            android:id="@+id/spinner_FraisAuForfait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/typeForfait"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/selectionnerdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Date:"/>
+
+
+
+        <EditText
+            android:id="@+id/selectionnerdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="Selectionner la date "
+            android:textColor="#CCEA7D" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/quantite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Quantité:"/>
+
+
+
+        <EditText
+            android:id="@+id/quantite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="Entrer la quantité  "
+            android:textColor="#CCEA7D" />
+
+    </LinearLayout>
+
+    <TextView
+        android:labelFor="@+id/txtsomme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:labelFor="@+id/montanttotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Montant total:"/>
+
+
+
+        <EditText
+            android:id="@+id/montanttotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:hint="Entrer le montant total  "
+            android:textColor="#CCEA7D" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/main_Button_Ajouter"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="25dp"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:text="Ajouter" />
+
+
+
+
+
+</LinearLayout>

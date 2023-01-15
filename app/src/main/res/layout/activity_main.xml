@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/game_activity_textview_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="Menu principal" />
+
+
+    <include layout="@layout/activity_entete"/>
+
+    <Button
+        android:id="@+id/main_Button_connexion"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:onClick="click_Menu"
+        android:text="Connexion" />
+    <Button
+        android:id="@+id/main_Button_Fraisauforfait"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:onClick="click_Menu"
+        android:text="Frais au forfait" />
+
+    <Button
+        android:id="@+id/main_Button_Fraishorsforfait"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:onClick="click_Menu"
+        android:text="Frais hors forfait" />
+
+    <Button
+        android:id="@+id/main_Button_Synthesedumois"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="20sp"
+        android:onClick="click_Menu"
+        android:text="Synthèse du mois" />
+
+    <Button
+        android:id="@+id/main_Button_Parametre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:backgroundTint="#8DDD90"
+        android:onClick="click_Menu"
+        android:padding="16dp"
+        android:text="Paramètre"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
