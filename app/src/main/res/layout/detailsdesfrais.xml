@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <TextView
+        android:id="@+id/nomdufrais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Nom du frais: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/quantite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomdufrais"
+        android:layout_below="@+id/nomdufrais"
+        android:text="Quantité: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/datesaisie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/quantite"
+        android:layout_below="@+id/quantite"
+        android:text="Date de saisie: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/montant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/datesaisie"
+        android:layout_below="@+id/datesaisie"
+        android:text="Montant: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <TextView
+        android:id="@+id/affichdatesaisie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/datesaisie"
+        android:layout_alignBottom="@+id/datesaisie"
+        android:layout_toRightOf="@+id/datesaisie"
+        android:text="Afficher date de saisie" />
+
+    <TextView
+        android:id="@+id/affichmontant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/montant"
+        android:layout_alignBottom="@+id/montant"
+        android:layout_alignLeft="@+id/affichdatesaisie"
+        android:text="Afficher montant" />
+
+
+    <TextView
+        android:id="@+id/affichquantite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/datesaisie"
+        android:layout_toRightOf="@+id/datesaisie"
+        android:text="Afficher quantite" />
+
+    <TextView
+        android:id="@+id/affichnomfrais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/quantite"
+        android:layout_alignLeft="@+id/affichquantite"
+        android:text="Afficher nom du frais" />
+
+
+
+</RelativeLayout>

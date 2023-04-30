@@ -26,7 +26,7 @@
     <include layout="@layout/activity_entete"/>
 
     <Button
-        android:id="@+id/main_Button_connexion"
+        android:id="@+id/main_Button_deconnexion"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -35,7 +35,7 @@
         android:backgroundTint="#8DDD90"
         android:textSize="20sp"
         android:onClick="click_Menu"
-        android:text="Connexion" />
+        android:text="Deconnexion" />
     <Button
         android:id="@+id/main_Button_Fraisauforfait"
         android:layout_width="300dp"

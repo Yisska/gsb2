@@ -1,5 +1,6 @@
 package fr.be2.gsb2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ public class connexion extends AppCompatActivity {
     EditText codeVerif;
     LinearLayout envoyer;
     Integer codeAleatoir;
+    private static final String MON_FICHIER = "GSB_PREF_USER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +26,8 @@ public class connexion extends AppCompatActivity {
         codeVisiteur = findViewById(R.id.codevisiteur);
         email = findViewById(R.id.email);
         envoyer = findViewById(R.id.nouveaumdp);
-        codeVerif= findViewById(R.id.newmdp);
+        codeVerif= findViewById(R.id.codeaffiche);
+
     }
 
     public void envoicode(View v){
@@ -40,10 +43,17 @@ public class connexion extends AppCompatActivity {
     }
     public void boncode (View v){
         String codeAleatoirStr = codeAleatoir.toString();
-        String codeverifStr = codeVerif.getText().toString();
+        String codeverifStr = codeVerif.getText().toString(); //récupère le texte et on le transforme en chaine de caractère
         if (codeAleatoirStr.equals(codeverifStr)){
-            Toast.makeText(this, "votre code est bon", Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, "votre code est bon", Toast.LENGTH_SHORT).show(); //Toast=print=afficher
+            // ce paragraphe permet de creer le fichier qui stocke les informations de connexion
+            getSharedPreferences(MON_FICHIER, MODE_PRIVATE)
+                    .edit()
+                    .putString("CodeVisiteur", codeVisiteur.getText().toString()) // "CodeVisiteur = nom de la variable et codeVisiteur = valeur de la variable
+                    .putString("email", email.getText().toString())
+                    .apply();
+            Intent intent = new Intent(connexion.this,MainActivity.class); //intent= permet de passer d'une page a l'autre
+            startActivity(intent); //lance l'activite intent
         }else{
             Toast.makeText(this, "erreur erreur", Toast.LENGTH_SHORT).show();
         }
