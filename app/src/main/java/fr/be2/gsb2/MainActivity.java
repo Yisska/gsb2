@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 intent=new Intent(MainActivity.this, fraishorsforfait.class);
                 break;
             case R.id.main_Button_Synthesedumois:
-                intent=new Intent(MainActivity.this, historiquedesenvois.class);
+                intent=new Intent(MainActivity.this, ConsulterFraisActivity.class);
                 break;
             case R.id.main_Button_Parametre:
-                intent=new Intent(MainActivity.this, parametre.class);
+                intent=new Intent(MainActivity.this, parametres.class);
                 break;
             case R.id.main_Button_deconnexion:
                 intent=new Intent(MainActivity.this, connexion.class);
@@ -68,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-        }
+    public void monClick(View view) {
+    }
+}
 
 
 

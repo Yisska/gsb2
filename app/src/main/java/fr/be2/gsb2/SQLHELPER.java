@@ -2,8 +2,15 @@ package fr.be2.gsb2;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class SQLHELPER extends SQLiteOpenHelper {
     //declaration des variables
@@ -17,6 +24,9 @@ public class SQLHELPER extends SQLiteOpenHelper {
     public static final String DATESAISIE = "DATESAISIE";
     public static final String LIBELLE = "LIBELLE";
 
+
+    private static final String TAG = "CountriesDbAdapter";
+
     /**
      * Crée une table par une requete SQL
      */
@@ -24,6 +34,12 @@ public class SQLHELPER extends SQLiteOpenHelper {
             " INTEGER PRIMARY KEY AUTOINCREMENT," + TYPE_FRAIS + " TEXT," + QUANTITE + " INTEGER," + DATE_FRAIS
             + " TEXT," + MONTANT + " REAL," + LIBELLE + " TEXT," + DATESAISIE + " DATETIME DEFAULT CURRENT_TIMESTAMP)";
 
+
+
+    private static final String CREATE_PARAMETRES="CREATE TABLE PARAMETRES(id int primary key,codev text ,nom text ," +
+            "prenom text, email text , urlserveur text ,password text)";
+
+    private static final String INIT_PARAMETRES="INSERT INTO PARAMETRES( ID, CODEV,NOM, PRENOM,EMAIL, URLSERVEUR) Values(1,0,'','','@','https://')";
 
     /**
      *
@@ -45,6 +61,8 @@ public class SQLHELPER extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         sqLiteDatabase.execSQL(CREATE_TABLE);
+        sqLiteDatabase.execSQL(CREATE_PARAMETRES);
+        sqLiteDatabase.execSQL(INIT_PARAMETRES);
 
 
     }
@@ -89,6 +107,127 @@ public class SQLHELPER extends SQLiteOpenHelper {
         return result != -1;
 
     }
+
+    public void init_parametres() {
+        //on cree une variable de type sqLitedatabase pr pouvoir y acceder
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("ID", 1);
+        contentValues.put("CODEV", 0);
+        contentValues.put("NOM", "");
+        contentValues.put("PRENOM", "");
+        contentValues.put("EMAIL", "");
+        contentValues.put("URLSERVEUR", "");
+        long result = db.insert("PARAMETRES", null, contentValues);
+        //  return result != -1;
+        return;
+    }
+    public boolean update_parametre(Integer CodeV, String Nom, String Prenom, String Email, String URL, String MyPassword ) {
+        //on cree une variable de type sqLitedatabase pr pouvoir y acceder
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("CODEV",CodeV);
+        contentValues.put("NOM", Nom);
+        contentValues.put("PRENOM", Prenom);
+        contentValues.put("EMAIL", Email);
+        contentValues.put("URLSERVEUR", URL);
+        if (MyPassword.length()>0)
+        {
+            contentValues.put("PASSWORD", sha1Hash(MyPassword.toString(),CodeV.toString()));
+
+        }
+        long result = db.update("PARAMETRES",contentValues,"ID=1",null);
+        return result != -1;
+
+    }
+
+
+    public Cursor viewData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "select * from " + DB_TABLE;
+        //cursor: type, pointeur: pr parcourir les lignes ds les resultats de la requete. Null car pas de where
+        Cursor pointeur = db.rawQuery(query, null);
+        return pointeur;
+
+    }
+
+    public Cursor fetchAllFrais() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor mCursor = db.query(DB_TABLE, new String[] { "rowid _id",DATE_FRAIS,
+                        MONTANT, DATESAISIE ,LIBELLE},
+                null, null, null, null, null);
+
+        if (mCursor != null) {
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+    public Cursor fetchFrais(String filtre) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor mCursor = db.query(DB_TABLE, new String[] { "rowid _id",DATE_FRAIS,
+                        MONTANT, DATESAISIE ,LIBELLE},
+                filtre, null, null, null, null);
+
+        if (mCursor != null) {
+            mCursor.moveToFirst();
+        }
+        return mCursor;
+    }
+
+    public Cursor fetch_parametre() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor Cursor = db.rawQuery("Select * from PARAMETRES",null,null);
+
+        return Cursor;
+    }
+
+
+    public SQLHELPER open() throws SQLException {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return this;
+
+    }
+
+    String sha1Hash( String chaine, String cle )
+    {
+        String hash = null;
+        String toHash= chaine + cle;
+        try
+        {
+            MessageDigest digest = MessageDigest.getInstance( "SHA-1" );
+            byte[] bytes = toHash.getBytes("UTF-8");
+            digest.update(bytes, 0, bytes.length);
+            bytes = digest.digest();
+
+            //This is ~55x faster than looping and String.formating()
+            hash = bytesToHex( bytes );
+
+        }
+        catch( NoSuchAlgorithmException e )
+        {
+            e.printStackTrace();
+        }
+        catch( UnsupportedEncodingException e )
+        {
+            e.printStackTrace();
+        }
+        return hash;
+    }
+    final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
+    public static String bytesToHex( byte[] bytes )
+    {
+        char[] hexChars = new char[ bytes.length * 2 ];
+        for( int j = 0; j < bytes.length; j++ )
+        {
+            int v = bytes[ j ] & 0xFF;
+            hexChars[ j * 2 ] = hexArray[ v >>> 4 ];
+            hexChars[ j * 2 + 1 ] = hexArray[ v & 0x0F ];
+        }
+        return new String( hexChars );
+    }
+
+
+
 
 
 }

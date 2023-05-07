@@ -6,76 +6,109 @@
     android:padding="6dip" >
 
     <TextView
-        android:id="@+id/nomdufrais"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Nom du frais: "
+        android:text="Code: "
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        android:text="libelle: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="Type de frais: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="Quantité: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:text="Montant: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:text="date: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/dateSaisie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView6"
+        android:layout_alignLeft="@+id/montant"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginBottom="-23dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/montant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView5"
+        android:layout_alignLeft="@+id/libelle"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginBottom="-23dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/typeFrais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/quantite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/nomdufrais"
-        android:layout_below="@+id/nomdufrais"
-        android:text="Quantité: "
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignLeft="@+id/montant"
+        android:layout_alignBottom="@+id/textView4"
+        android:text="TextView" />
 
     <TextView
-        android:id="@+id/datesaisie"
+        android:id="@+id/libelle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/quantite"
-        android:layout_below="@+id/quantite"
-        android:text="Date de saisie: "
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_above="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="TextView" />
 
     <TextView
-        android:id="@+id/montant"
+        android:id="@+id/code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/datesaisie"
-        android:layout_below="@+id/datesaisie"
-        android:text="Montant: "
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-
-    <TextView
-        android:id="@+id/affichdatesaisie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/datesaisie"
-        android:layout_alignBottom="@+id/datesaisie"
-        android:layout_toRightOf="@+id/datesaisie"
-        android:text="Afficher date de saisie" />
-
-    <TextView
-        android:id="@+id/affichmontant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/montant"
-        android:layout_alignBottom="@+id/montant"
-        android:layout_alignLeft="@+id/affichdatesaisie"
-        android:text="Afficher montant" />
-
-
-    <TextView
-        android:id="@+id/affichquantite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/datesaisie"
-        android:layout_toRightOf="@+id/datesaisie"
-        android:text="Afficher quantite" />
-
-    <TextView
-        android:id="@+id/affichnomfrais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/quantite"
-        android:layout_alignLeft="@+id/affichquantite"
-        android:text="Afficher nom du frais" />
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/libelle"
+        android:text="TextView" />
 
 
 

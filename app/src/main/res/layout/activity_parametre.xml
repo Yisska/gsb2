@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_centerHorizontal="true"
-    tools:context=".parametre">
+    tools:context=".MainActivity">
 
     <include layout="@layout/activity_entete"/>
 
@@ -73,12 +73,12 @@
         android:hint="Votre prénom" />
 
     <TextView
-        android:labelFor="@+id/codevisiteur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:labelFor="@+id/codevisiteur"
+        android:text="Code visiteur:"
         android:textSize="25dp"
-        android:textStyle="bold"
-        android:text="Code visiteur:"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/codevisiteur"
@@ -128,7 +128,8 @@
         android:padding="16dp"
         android:backgroundTint="#8DDD90"
         android:textSize="20sp"
-        android:text="Enregistrer" />
+        android:text="Enregistrer"
+        />
 
 
 

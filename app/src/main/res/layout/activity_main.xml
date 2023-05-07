@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_margin="16dp"
-        android:padding="16dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         android:background="@color/black"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -25,26 +25,16 @@
 
     <include layout="@layout/activity_entete"/>
 
-    <Button
-        android:id="@+id/main_Button_deconnexion"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="16dp"
-        android:padding="16dp"
-        android:backgroundTint="#8DDD90"
-        android:textSize="20sp"
-        android:onClick="click_Menu"
-        android:text="Deconnexion" />
+
     <Button
         android:id="@+id/main_Button_Fraisauforfait"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="16dp"
-        android:padding="16dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         android:backgroundTint="#8DDD90"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:onClick="click_Menu"
         android:text="Frais au forfait" />
 
@@ -53,10 +43,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="16dp"
-        android:padding="16dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         android:backgroundTint="#8DDD90"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:onClick="click_Menu"
         android:text="Frais hors forfait" />
 
@@ -65,10 +55,11 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="16dp"
-        android:padding="16dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+
         android:backgroundTint="#8DDD90"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:onClick="click_Menu"
         android:text="Synthèse du mois" />
 
@@ -77,12 +68,24 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="16dp"
+        android:layout_margin="10dp"
         android:backgroundTint="#8DDD90"
         android:onClick="click_Menu"
-        android:padding="16dp"
+        android:padding="10dp"
         android:text="Paramètre"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/main_Button_deconnexion"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:backgroundTint="#8DDD90"
+        android:textSize="15sp"
+        android:onClick="click_Menu"
+        android:text="Deconnexion" />
 
 
 </LinearLayout>
