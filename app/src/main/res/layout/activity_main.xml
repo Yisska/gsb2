@@ -34,7 +34,7 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:backgroundTint="#8DDD90"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:onClick="click_Menu"
         android:text="Frais au forfait" />
 
@@ -46,7 +46,7 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:backgroundTint="#8DDD90"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:onClick="click_Menu"
         android:text="Frais hors forfait" />
 
@@ -57,9 +57,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
         android:padding="10dp"
-
         android:backgroundTint="#8DDD90"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:onClick="click_Menu"
         android:text="Synthèse du mois" />
 
@@ -73,7 +72,7 @@
         android:onClick="click_Menu"
         android:padding="10dp"
         android:text="Paramètre"
-        android:textSize="15sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/main_Button_deconnexion"
@@ -83,7 +82,7 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:backgroundTint="#8DDD90"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:onClick="click_Menu"
         android:text="Deconnexion" />
 

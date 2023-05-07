@@ -37,7 +37,7 @@ public class SQLHELPER extends SQLiteOpenHelper {
 
 
     private static final String CREATE_PARAMETRES="CREATE TABLE PARAMETRES(id int primary key,codev text ,nom text ," +
-            "prenom text, email text , urlserveur text ,password text)";
+            "prenom text, email text , urlserveur text)";
 
     private static final String INIT_PARAMETRES="INSERT INTO PARAMETRES( ID, CODEV,NOM, PRENOM,EMAIL, URLSERVEUR) Values(1,0,'','','@','https://')";
 
@@ -122,7 +122,7 @@ public class SQLHELPER extends SQLiteOpenHelper {
         //  return result != -1;
         return;
     }
-    public boolean update_parametre(Integer CodeV, String Nom, String Prenom, String Email, String URL, String MyPassword ) {
+    public boolean update_parametre(Integer CodeV, String Nom, String Prenom, String Email, String URL) {
         //on cree une variable de type sqLitedatabase pr pouvoir y acceder
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -131,11 +131,7 @@ public class SQLHELPER extends SQLiteOpenHelper {
         contentValues.put("PRENOM", Prenom);
         contentValues.put("EMAIL", Email);
         contentValues.put("URLSERVEUR", URL);
-        if (MyPassword.length()>0)
-        {
-            contentValues.put("PASSWORD", sha1Hash(MyPassword.toString(),CodeV.toString()));
 
-        }
         long result = db.update("PARAMETRES",contentValues,"ID=1",null);
         return result != -1;
 
@@ -153,7 +149,7 @@ public class SQLHELPER extends SQLiteOpenHelper {
 
     public Cursor fetchAllFrais() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor mCursor = db.query(DB_TABLE, new String[] { "rowid _id",DATE_FRAIS,
+        Cursor mCursor = db.query(DB_TABLE, new String[] { "rowid _id",DATE_FRAIS, TYPE_FRAIS, QUANTITE,
                         MONTANT, DATESAISIE ,LIBELLE},
                 null, null, null, null, null);
 

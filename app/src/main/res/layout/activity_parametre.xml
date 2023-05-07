@@ -101,23 +101,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25dp"
-        android:hint="Votre URL" />
+        android:hint="URL du serveur" />
 
-    <TextView
-        android:labelFor="@id/mdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:padding="4dp"
-        android:textStyle="bold"
-        android:text="Mot de passe:"/>
-
-    <EditText
-        android:id="@+id/mdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:hint="Votre mot de passe" />
 
 
     <Button
@@ -128,6 +113,7 @@
         android:padding="16dp"
         android:backgroundTint="#8DDD90"
         android:textSize="20sp"
+        android:onClick="ClickValider"
         android:text="Enregistrer"
         />
 

@@ -70,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void monClick(View view) {
     }
+
+    public void ClickValider(View view) {
+    }
 }
 
 

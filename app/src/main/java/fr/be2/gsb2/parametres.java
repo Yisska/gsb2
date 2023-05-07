@@ -16,7 +16,6 @@ public class parametres extends MainActivity {
     EditText Prenom;
     EditText Mail;
     EditText Urlserveur;
-    EditText Password;
     Button Valider;
 
     @Override
@@ -31,7 +30,7 @@ public class parametres extends MainActivity {
         Cursor Param = database.fetch_parametre();
         Param.moveToFirst();
         Codev = findViewById(R.id.codevisiteur);
-        Codev.setText(Param.getString(Param.getColumnIndexOrThrow("odev")));
+        Codev.setText(Param.getString(Param.getColumnIndexOrThrow("codev")));
         Nom = findViewById(R.id.nom);
         Nom.setText(Param.getString(Param.getColumnIndexOrThrow("nom")));
         Prenom = findViewById(R.id.prenom);
@@ -40,8 +39,6 @@ public class parametres extends MainActivity {
         Mail.setText(Param.getString(Param.getColumnIndexOrThrow("email")));
         Urlserveur = findViewById(R.id.url);
         Urlserveur.setText(Param.getString(Param.getColumnIndexOrThrow("urlserveur")));
-        Password = findViewById(R.id.mdp);
-        Password.setText(Param.getString(Param.getColumnIndexOrThrow("motdepasse")));
         Valider=findViewById(R.id.main_Button_enregistrer);
     }
 
@@ -53,7 +50,7 @@ public class parametres extends MainActivity {
             case R.id.main_Button_enregistrer:
                 if (Codev.getText().toString().trim().length() == 0 || Nom.getText().toString().length() == 0
                         || Prenom.getText().toString().trim().length() == 0 || Mail.getText().toString().trim().length() == 0 ||
-                        Urlserveur.getText().toString().trim().length() == 0|| Password.getText().toString().trim().length() == 0) {
+                        Urlserveur.getText().toString().trim().length() == 0 ){
                     //getText : recupere , toString met en chiffre trim enleve les espaces lenght compte a longueur
                     afficherMessage("Erreur!", "Champ vide");
                     return;
@@ -64,8 +61,7 @@ public class parametres extends MainActivity {
                     String prenom = Prenom.getText().toString();
                     String mail = Mail.getText().toString();
                     String urlserveur = Urlserveur.getText().toString();
-                    String password = Password.getText().toString();
-                    if(database. update_parametre(codev,nom,prenom,mail,urlserveur,password)){
+                    if(database. update_parametre(codev,nom,prenom,mail,urlserveur)){
                         afficherMessage("Succès", "Valeur ajoutée. " );
                         return;
                     }

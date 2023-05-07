@@ -24,7 +24,7 @@
             android:name=".entete"
             android:exported="false" />
         <activity
-            android:name=".parametre"
+            android:name=".parametres"
             android:exported="false" />
         <activity
             android:name=".newmotdepasse"
